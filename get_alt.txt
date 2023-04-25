@@ -1,0 +1,12 @@
+app.get('/api/persons', async (request, response) => {
+try {
+let entries = await Person.find({}).exec();
+console.log(entries)
+response.json(entries);
+	}
+catch (err) {
+throw err;
+	}
+
+ 		 mongoose.connection.close()
+	})
