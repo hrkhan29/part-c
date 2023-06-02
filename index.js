@@ -5,8 +5,6 @@ app.use(express.static('build'))
 require('dotenv').config()
 const cors = require('cors')
 app.use(cors())
-const process = require('node:process')
-
 
 const Person = require('./models/person')
 
